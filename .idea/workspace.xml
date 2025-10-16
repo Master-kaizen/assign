@@ -5,48 +5,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89f78479-1f5a-4650-a434-be2e6e632352" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/the code go dey here.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ENGINE/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ENGINE/gpt_sensei.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ENGINE/sensei_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/chess_board.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/menu_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/the code go dey here.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/the code go dey here.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Bdt45 (1).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Blt45 (1).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Ndt45 (1).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Nlt45 (1).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_bdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_blt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_fdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_flt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_gdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_glt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_hdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_hlt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_kdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_klt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_mdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_mlt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_ndt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_nlt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_pdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_plt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_qdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_qlt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_rdt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_rlt45.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/718108__alexarje__playing-chess-soundactions-010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="346JXOlJ0Puov2cCJtdkgzLPMi2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.chess_board.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.menu_screen.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.26830.99" />
         <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
       </set>
     </attachedChunks>
@@ -59,24 +104,17 @@
       <option name="presentableId" value="Default" />
       <updated>1760528132803</updated>
       <workItem from="1760528167613" duration="3437000" />
+      <workItem from="1760605039643" duration="9198000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/main_py$chess_board.coverage" NAME="chess_board Coverage Results" MODIFIED="1760616526858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
     <SUITE FILE_PATH="coverage/the_code_go_dey_here$main.coverage" NAME="main Coverage Results" MODIFIED="1760533148270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1760616534518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_py$menu_screen.coverage" NAME="menu_screen Coverage Results" MODIFIED="1760611856567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>
