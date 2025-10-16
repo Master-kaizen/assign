@@ -5,6 +5,8 @@ import io
 import cairosvg
 from pathlib import Path
 from copy import deepcopy
+from ENGINE.sensei_engine import legal_moves_for, move_leaves_king_in_check
+
 
 # -- helpers to load SVG once
 def load_svg_as_surface(svg_path, convert_size=None):

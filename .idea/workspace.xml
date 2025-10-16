@@ -4,42 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f78479-1f5a-4650-a434-be2e6e632352" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ENGINE/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ENGINE/gpt_sensei.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ENGINE/sensei_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/chess_board.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/menu_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/the code go dey here.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/the code go dey here.iml" afterDir="false" />
+    <list default="true" id="89f78479-1f5a-4650-a434-be2e6e632352" name="Changes" comment="some new stuff lol">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Bdt45 (1).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Blt45 (1).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Ndt45 (1).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_Nlt45 (1).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_bdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_blt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_fdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_flt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_gdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_glt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_hdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_hlt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_kdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_klt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_mdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_mlt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_ndt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_nlt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_pdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_plt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_qdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_qlt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_rdt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pieces/Chess_rlt45.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/718108__alexarje__playing-chess-soundactions-010.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENGINE/sensei_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/ENGINE/sensei_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/chess_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chess_board.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Master-kaizen"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Master-kaizen/assign",
+    "accountId": "3f350a8a-8a22-4ce3-ad4c-8593d38bdcda"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -104,12 +84,25 @@
       <option name="presentableId" value="Default" />
       <updated>1760528132803</updated>
       <workItem from="1760528167613" duration="3437000" />
-      <workItem from="1760605039643" duration="9198000" />
+      <workItem from="1760605039643" duration="11187000" />
     </task>
+    <task id="LOCAL-00001" summary="some new stuff lol">
+      <option name="closed" value="true" />
+      <created>1760616895302</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760616895302</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some new stuff lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="some new stuff lol" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/main_py$chess_board.coverage" NAME="chess_board Coverage Results" MODIFIED="1760616526858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
