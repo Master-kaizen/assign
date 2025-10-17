@@ -3,3 +3,6 @@ python-chess
 stockfish
 transformers
 torch
+cariosvg
+copy
+deepcopy

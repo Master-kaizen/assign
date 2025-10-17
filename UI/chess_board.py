@@ -13,7 +13,11 @@ from ENGINE.sensei_engine import (
     get_color,
     in_bounds,
     get_type,
+    is_in_check,
+    is_checkmate,
+    find_king,
 )
+
 
 
 # -- helpers to load SVG once
@@ -71,6 +75,11 @@ def show_board(screen):
 
     turn = "white"
 
+    # game state display flags
+    game_over = False
+    winner = None  # "white" or "black" on checkmate
+    check_message_timer = 0  # small timer so message is visible briefly if wanted
+
     dragging = False
     drag_piece = None
     drag_from = None
@@ -79,6 +88,29 @@ def show_board(screen):
     while True:
         mouse_x, mouse_y = pygame.mouse.get_pos()
         for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_q:
+                    pygame.quit()
+                    sys.exit()
+                if event.key == pygame.K_r:
+                    # simple restart: reinitialize board_matrix and state
+                    # (recreate starting position)
+                    board_matrix = []
+                    board_matrix.append([f"black_{p}" for p in back_rank])
+                    board_matrix.append([f"black_pawn" for _ in range(8)])
+                    for _ in range(4):
+                        board_matrix.append([None for _ in range(8)])
+                    board_matrix.append([f"white_pawn" for _ in range(8)])
+                    board_matrix.append([f"white_{p}" for p in back_rank])
+                    turn = "white"
+                    game_over = False
+                    winner = None
+                    drag_piece = None
+                    drag_from = None
+                    dragging = False
+                    check_message_timer = 0
+                    print("Game restarted")
+
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
@@ -89,8 +121,12 @@ def show_board(screen):
                 if rc:
                     r, c = rc
                     pk = board_matrix[r][c]
+                    if game_over:
+                        # ignore clicks if game ended
+                        continue
                     if pk and get_color(pk) == turn:
                         dragging = True
+
                         drag_piece = pk
                         drag_from = (r, c)
                         # offset so the piece draws centered under cursor
@@ -150,6 +186,21 @@ def show_board(screen):
                                 print("Turn:", turn)
                                 drag_piece = None
                                 drag_from = None
+
+                                # --- check / checkmate detection right after move ---
+                                # If opponent king is in check or checkmate, set flags
+                                opponent = "white" if turn == "black" else "black"
+                                if is_checkmate(board_matrix, opponent):
+                                    game_over = True
+                                    winner = "white" if opponent == "black" else "black"  # side that delivered mate
+                                    print("Checkmate! Winner:", winner)
+                                else:
+                                    # standard check detection (non-mate)
+                                    if is_in_check(board_matrix, opponent):
+                                        # opponent is in check; optionally play sound or flash
+                                        print(f"{opponent} is in check!")
+                                        check_message_timer = 120  # 2 seconds @60fps
+
                         else:
                             # illegal move, snap back
                             sr, sc = drag_from
@@ -173,6 +224,22 @@ def show_board(screen):
                         screen.blit(surf, rect.topleft)
 
         # draw dragged piece following cursor (on top)
+        # --- draw board & pieces ---
+        screen.fill((240, 240, 240))
+        for row in range(8):
+            for col in range(8):
+                color = (240, 217, 181) if (row + col) % 2 == 0 else (181, 136, 99)
+                rect = pygame.Rect(start_x + col * tile_size,
+                                   start_y + row * tile_size,
+                                   tile_size, tile_size)
+                pygame.draw.rect(screen, color, rect)
+                key = board_matrix[row][col]
+                if key:
+                    surf = pieces.get(key)
+                    if surf:
+                        screen.blit(surf, rect.topleft)
+
+        # --- draw dragged piece on top if dragging ---
         if dragging and drag_piece:
             surf = pieces.get(drag_piece)
             if surf:
@@ -180,5 +247,62 @@ def show_board(screen):
                 draw_y = mouse_y + drag_offset[1]
                 screen.blit(surf, (draw_x, draw_y))
 
+        # ===================================================
+        # 🔥 CHECK & CHECKMATE OVERLAYS (now outside drag block)
+        # ===================================================
+
+        # compute check / mate each frame for correct highlighting
+        white_in_check = is_in_check(board_matrix, "white")
+        black_in_check = is_in_check(board_matrix, "black")
+        white_mate = is_checkmate(board_matrix, "white")
+        black_mate = is_checkmate(board_matrix, "black")
+
+        # highlight kings if in check
+        def highlight_king(color, highlight_color=(255, 50, 50)):
+            kp = find_king(board_matrix, color)
+            if kp:
+                kr, kc = kp
+                rect = pygame.Rect(start_x + kc * tile_size, start_y + kr * tile_size, tile_size, tile_size)
+                s = pygame.Surface((tile_size, tile_size), pygame.SRCALPHA)
+                s.fill((*highlight_color, 120))  # semi-transparent
+                screen.blit(s, rect.topleft)
+
+        if white_in_check:
+            highlight_king("white")
+        if black_in_check:
+            highlight_king("black")
+
+        # draw check/checkmate messages
+        font_small = pygame.font.Font(None, 36)
+        font_big = pygame.font.Font(None, 56)
+
+        # --- show "Check!" when a side is in check but not mate ---
+        if (white_in_check and not white_mate) or (black_in_check and not black_mate):
+            msg = "Check!"
+            text = font_small.render(msg, True, (200, 30, 30))
+            screen.blit(text, (20, 20))
+
+        # --- show "Checkmate" when real mate occurs ---
+        if white_mate or black_mate or game_over:
+            if white_mate or black_mate:
+                mate_winner = "black" if white_mate else "white"
+                msg = f"Checkmate — {mate_winner.capitalize()} wins"
+            elif game_over and winner:
+                msg = f"Checkmate — {winner.capitalize()} wins"
+            else:
+                msg = "Game Over"
+
+            text = font_big.render(msg, True, (10, 10, 10))
+            tw, th = text.get_size()
+            banner = pygame.Surface((tw + 40, th + 24), pygame.SRCALPHA)
+            banner.fill((255, 255, 255, 220))
+            screen.blit(banner, (WIDTH // 2 - (tw + 40) // 2, 20))
+            screen.blit(text, (WIDTH // 2 - tw // 2, 32))
+
+            sub = font_small.render("Press R to restart or Q to quit", True, (30, 30, 30))
+            screen.blit(sub, (WIDTH // 2 - sub.get_width() // 2, 32 + th + 10))
+
         pygame.display.flip()
         clock.tick(60)
+
+

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f78479-1f5a-4650-a434-be2e6e632352" name="Changes" comment="writing the validation code">
+    <list default="true" id="89f78479-1f5a-4650-a434-be2e6e632352" name="Changes" comment="god thank you clean split">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENGINE/sensei_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/ENGINE/sensei_engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/chess_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chess_board.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Master-kaizen"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Master-kaizen&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Master-kaizen/assign",
-    "accountId": "3f350a8a-8a22-4ce3-ad4c-8593d38bdcda"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Master-kaizen/assign&quot;,
+    &quot;accountId&quot;: &quot;3f350a8a-8a22-4ce3-ad4c-8593d38bdcda&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -113,7 +115,8 @@
       <option name="presentableId" value="Default" />
       <updated>1760528132803</updated>
       <workItem from="1760528167613" duration="3437000" />
-      <workItem from="1760605039643" duration="12239000" />
+      <workItem from="1760605039643" duration="16128000" />
+      <workItem from="1760689793671" duration="5287000" />
     </task>
     <task id="LOCAL-00001" summary="some new stuff lol">
       <option name="closed" value="true" />
@@ -139,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760623357874</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="writing the validation code chess_board.py">
+      <option name="closed" value="true" />
+      <created>1760624259374</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760624259374</updated>
+    </task>
+    <task id="LOCAL-00005" summary="god thank you clean split">
+      <option name="closed" value="true" />
+      <created>1760627675380</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760627675380</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,12 +167,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some new stuff lol" />
     <MESSAGE value="writing the validation code" />
-    <option name="LAST_COMMIT_MESSAGE" value="writing the validation code" />
+    <MESSAGE value="writing the validation code chess_board.py" />
+    <MESSAGE value="god thank you clean split" />
+    <option name="LAST_COMMIT_MESSAGE" value="god thank you clean split" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/main_py$chess_board.coverage" NAME="chess_board Coverage Results" MODIFIED="1760616526858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
     <SUITE FILE_PATH="coverage/the_code_go_dey_here$main.coverage" NAME="main Coverage Results" MODIFIED="1760533148270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1760623559204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1760694529952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/main_py$menu_screen.coverage" NAME="menu_screen Coverage Results" MODIFIED="1760611856567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>

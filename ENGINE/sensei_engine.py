@@ -1,5 +1,3 @@
-# ENGINE/sensei_engine.py
-
 from copy import deepcopy
 
 # ---------- Utility helpers ----------
@@ -147,3 +145,82 @@ def move_leaves_king_in_check(board_matrix, sr, sc, er, ec):
     opponent = "white" if color == "black" else "black"
     opp_attacks = attacked_squares(sim, opponent)
     return king_pos in opp_attacks
+
+# ---------- Helpers for check / checkmate detection ----------
+
+def find_king(board_matrix, color):
+    """Return (r,c) of the king of given color, or None if not found."""
+    for r in range(8):
+        for c in range(8):
+            k = board_matrix[r][c]
+            if k and get_type(k) == "king" and get_color(k) == color:
+                return (r, c)
+    return None
+
+def is_in_check(board_matrix, color):
+    """
+    Return True if the king of `color` is currently attacked.
+    Uses attacked_squares by the opponent.
+    """
+    king_pos = find_king(board_matrix, color)
+    if king_pos is None:
+        # no king: treat as in check (invalid board)
+        return True
+    opponent = "white" if color == "black" else "black"
+    opp_attacks = attacked_squares(board_matrix, opponent)
+    return king_pos in opp_attacks
+
+# ---------- New helpers: simulate move and enumerate all legal moves for color ----------
+
+def simulate_move(board_matrix, sr, sc, er, ec):
+    """
+    Return a deep-copied board with the move applied.
+    This does a simple move/capture (no en-passant, no promotions handling).
+    """
+    sim = deepcopy(board_matrix)
+    moving_piece = sim[sr][sc]
+    sim[er][ec] = moving_piece
+    sim[sr][sc] = None
+    return sim
+
+def all_legal_moves_for_color(board_matrix, color):
+    """
+    Generator that yields tuples (sr, sc, er, ec, piece_key)
+    for every legal move according to piece move generation (not considering king-in-check filter).
+    Caller should simulate and test resulting legality (i.e. whether king remains in check).
+    """
+    for r in range(8):
+        for c in range(8):
+            key = board_matrix[r][c]
+            if not key or get_color(key) != color:
+                continue
+            moves = legal_moves_for(key, r, c, board_matrix)
+            for (er, ec) in moves:
+                yield (r, c, er, ec, key)
+
+def is_checkmate(board_matrix, color):
+    """
+    Checkmate: king is in check and the side has NO legal moves that avoid check.
+    We iterate all pieces of `color`, generate legal moves, and simulate them.
+    """
+    # If king isn't in check, not checkmate
+    if not is_in_check(board_matrix, color):
+        return False
+
+    # For every legal move for this color
+    for sr, sc, er, ec, piece_key in all_legal_moves_for_color(board_matrix, color):
+        # simulate the move
+        sim = simulate_move(board_matrix, sr, sc, er, ec)
+
+        # find king position after move (the king may have moved)
+        kpos = find_king(sim, color)
+        if kpos is None:
+            # no king after the move => treat as invalid (skip)
+            continue
+
+        # if after this move the king is NOT in check, then it's not checkmate
+        if not is_in_check(sim, color):
+            return False
+
+    # no legal move avoids check -> checkmate
+    return True
